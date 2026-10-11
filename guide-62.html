@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>강남 유앤미 가라오케 방문·귀가 동선 준비 가이드</title>
+  <meta name="description" content="강남 유앤미 가라오케 방문 전 정확한 위치와 도보 경로, 종료 예정 시각, 대중교통 및 차량 귀가 동선을 함께 준비하는 방법을 안내합니다.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f2f4f7;
+      color: #252a31;
+      font-family: Arial, "Malgun Gothic", sans-serif;
+      line-height: 1.8;
+    }
+
+    main {
+      width: min(840px, calc(100% - 32px));
+      margin: 48px auto;
+      padding: 46px 34px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 12px 34px rgba(38, 51, 69, .09);
+    }
+
+    h1 {
+      margin: 0 0 22px;
+      font-size: 32px;
+      line-height: 1.4;
+      color: #283b52;
+    }
+
+    h2 {
+      margin: 44px 0 16px;
+      font-size: 23px;
+      line-height: 1.5;
+      color: #41678e;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: #375777;
+    }
+
+    p,
+    li,
+    th,
+    td {
+      font-size: 16px;
+    }
+
+    .intro {
+      font-size: 17px;
+      color: #4b5562;
+    }
+
+    .route-point {
+      margin: 30px 0;
+      padding: 22px;
+      background: #ebf1f7;
+      border-left: 5px solid #5c80a5;
+    }
+
+    .route-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 25px 0;
+    }
+
+    .route-card {
+      padding: 20px;
+      background: #fafbfc;
+      border: 1px solid #dce4eb;
+      border-radius: 9px;
+    }
+
+    .route-card p {
+      margin-bottom: 0;
+    }
+
+    .transport-table {
+      width: 100%;
+      margin: 25px 0;
+      border-collapse: collapse;
+    }
+
+    .transport-table th,
+    .transport-table td {
+      padding: 15px;
+      border: 1px solid #d9e0e6;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .transport-table thead th {
+      background: #3b5e81;
+      color: #fff;
+    }
+
+    .transport-table tbody th {
+      width: 27%;
+      background: #edf2f6;
+      color: #34516e;
+    }
+
+    .timeline {
+      margin: 26px 0;
+      padding-left: 23px;
+      border-left: 3px solid #6c8eaf;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin: 0 0 23px;
+      padding: 19px 21px;
+      background: #f7f9fa;
+      border-radius: 9px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: -31px;
+      width: 13px;
+      height: 13px;
+      background: #52799d;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px #6c8eaf;
+    }
+
+    .timeline-item p {
+      margin-bottom: 0;
+    }
+
+    .share-box {
+      margin: 26px 0;
+      padding: 22px;
+      color: #fff;
+      background: #303b49;
+      border-radius: 9px;
+    }
+
+    .share-box p {
+      margin: 6px 0;
+    }
+
+    .check-list {
+      padding: 22px 24px 22px 44px;
+      background: #f4f6f7;
+      border-radius: 9px;
+    }
+
+    .check-list li {
+      margin: 8px 0;
+    }
+
+    .notice {
+      margin-top: 34px;
+      padding: 18px 20px;
+      background: #fff7e7;
+      border: 1px solid #ead6a8;
+      border-radius: 8px;
+    }
+
+    .reference {
+      margin-top: 42px;
+      padding-top: 24px;
+      border-top: 1px solid #d9dfe4;
+    }
+
+    a {
+      color: #2d6da4;
+      font-weight: 700;
+    }
+
+    @media (max-width: 700px) {
+      main {
+        margin: 20px auto;
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      h2 {
+        font-size: 21px;
+      }
+
+      .route-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .transport-table th,
+      .transport-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .transport-table thead {
+        display: none;
+      }
+
+      .transport-table tbody th {
+        border-bottom: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <article>
+      <h1>강남 유앤미 가라오케 방문·귀가 동선 준비 가이드</h1>
+
+      <p class="intro">
+        강남 유앤미 가라오케 방문을 계획할 때는 장소까지 가는 경로만 살펴보기보다
+        모임이 끝난 뒤 각 일행이 어떻게 돌아갈지도 함께 정하는 것이 좋습니다.
+        종료 예정 시각에 이용할 수 있는 교통수단과 실제 이동 경로를 확인하면
+        모임 시간을 무리 없이 계획할 수 있습니다.
+      </p>
+
+      <div class="route-point">
+        <strong>방문 경로와 귀가 경로는 따로 확인하세요.</strong><br>
+        모임을 시작할 때와 끝낼 때는 시간대와 교통 상황이 다르므로
+        같은 경로를 그대로 이용할 수 있다고 단정하기 어렵습니다.
+      </div>
+
+      <h2>1. 정확한 목적지를 먼저 확인하세요</h2>
+
+      <p>
+        ‘강남’이라는 지역명은 대략적인 범위를 나타냅니다.
+        실제로 이동할 때는 도로명 주소와 건물명,
+        큰길에서 건물로 들어가는 방향 및 출입구를 확인해야 합니다.
+      </p>
+
+      <div class="route-grid">
+        <section class="route-card">
+          <h3>도로명 주소</h3>
+          <p>
+            지도 검색과 차량 내비게이션에 사용할
+            정확한 주소를 준비합니다.
+          </p>
+        </section>
+
+        <section class="route-card">
+          <h3>건물명</h3>
+          <p>
+            같은 주소나 주변에 비슷한 시설이 있을 때
+            목적지를 구분하는 기준이 됩니다.
+          </p>
+        </section>
+
+        <section class="route-card">
+          <h3>실제 출입구</h3>
+          <p>
+            큰길과 골목 중 어느 방향으로 들어가야 하는지
+            구체적으로 확인합니다.
+          </p>
+        </section>
+
+        <section class="route-card">
+          <h3>주변 기준점</h3>
+          <p>
+            일행이 길을 찾을 때 활용할 수 있는
+            명확한 주변 지점을 정합니다.
+          </p>
+        </section>
+      </div>
+
+      <h2>2. 역에서 건물 입구까지의 경로를 살펴보세요</h2>
+
+      <p>
+        가까운 역이나 정류장만 확인하면
+        하차한 뒤 남는 도보 구간을 놓치기 쉽습니다.
+        출구에서 실제 건물 입구까지 횡단보도와 골목을 포함한
+        이동시간을 기준으로 계획하세요.
+      </p>
+
+      <ul class="check-list">
+        <li>이용할 역과 정확한 출구 번호</li>
+        <li>출구에서 건물까지 이어지는 도보 경로</li>
+        <li>큰길에서 건물 입구로 들어가는 방향</li>
+        <li>일행이 모일 구체적인 기준점</li>
+        <li>길을 찾지 못했을 때 연락할 대표자</li>
+      </ul>
+
+      <h2>3. 종료시간에 이용할 교통수단을 확인하세요</h2>
+
+      <table class="transport-table">
+        <thead>
+          <tr>
+            <th>귀가 방법</th>
+            <th>확인할 내용</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>지하철</th>
+            <td>
+              예상 종료 시각에 이용할 노선과 환승,
+              실제 날짜의 막차 운행 정보를 확인합니다.
+            </td>
+          </tr>
+          <tr>
+            <th>버스</th>
+            <td>
+              가까운 정류장의 위치와 귀가 방향,
+              늦은 시간의 배차 정보를 살펴봅니다.
+            </td>
+          </tr>
+          <tr>
+            <th>택시</th>
+            <td>
+              차량을 호출하기 편한 위치와
+              일행이 나누어 이동할 방법을 정합니다.
+            </td>
+          </tr>
+          <tr>
+            <th>자차</th>
+            <td>
+              주차 가능 여부와 출차 가능한 시간,
+              귀가 시 이용할 차량을 확인합니다.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>4. 마쳐야 하는 시각에서 거꾸로 계산하세요</h2>
+
+      <p>
+        이용시간을 먼저 정하기보다 일행이 안전하게 귀가할 수 있는
+        마지막 시각을 기준으로 모임 종료시간을 계산해 보세요.
+        건물에서 나오는 시간과 교통수단까지 이동하는 시간도 포함해야 합니다.
+      </p>
+
+      <div class="timeline">
+        <section class="timeline-item">
+          <h3>귀가 교통수단 출발 시각</h3>
+          <p>
+            실제 방문 날짜에 이용할 수 있는 막차나 차량 시간을 확인합니다.
+          </p>
+        </section>
+
+        <section class="timeline-item">
+          <h3>역이나 정류장까지 이동</h3>
+          <p>
+            건물 출입구에서 교통수단을 이용할 지점까지 걸리는 시간을 계산합니다.
+          </p>
+        </section>
+
+        <section class="timeline-item">
+          <h3>모임 마무리</h3>
+          <p>
+            결제와 개인 물품 정리 등 장소에서 나오는 데 필요한 시간을 포함합니다.
+          </p>
+        </section>
+
+        <section class="timeline-item">
+          <h3>이용 종료 시각</h3>
+          <p>
+            위 시간을 모두 반영해 실제로 모임을 마쳐야 하는 시각을 정합니다.
+          </p>
+        </section>
+      </div>
+
+      <h2>5. 일행별 귀가 방법이 다르면 따로 정리하세요</h2>
+
+      <p>
+        일부 일행은 대중교통으로 돌아가고
+        다른 사람은 차량이나 택시를 이용할 수 있습니다.
+        가장 늦게까지 머무를 사람만 기준으로 종료시간을 정하지 말고
+        먼저 귀가해야 하는 사람의 일정도 확인하세요.
+      </p>
+
+      <ul class="check-list">
+        <li>대중교통을 이용할 인원</li>
+        <li>먼저 귀가해야 하는 일행과 시간</li>
+        <li>택시를 함께 이용할 사람</li>
+        <li>차량을 가져온 사람과 주차 조건</li>
+        <li>늦게까지 남을 인원의 이동 방법</li>
+      </ul>
+
+      <h2>6. 이용시간의 시작과 종료 기준을 물어보세요</h2>
+
+      <p>
+        귀가시간에 맞춰 계획하려면 이용시간이 언제부터 시작되고
+        어떤 시점에 종료되는지 확인해야 합니다.
+        추가 시간이 필요한 경우 연장 가능 여부와 조건도 함께 물어보세요.
+      </p>
+
+      <p>
+        도착 후 대기가 생기는 경우 시간 계산이 어떻게 적용되는지,
+        일행 일부가 늦게 합류할 때 이용시간이 달라지는지도
+        방문 전에 확인하는 것이 좋습니다.
+      </p>
+
+      <h2>7. 확인된 사실과 자신의 예상을 나누어 기록하세요</h2>
+
+      <p>
+        상담에서 안내받은 조건과 개인적으로 예상한 내용을 섞으면
+        일행에게 잘못된 정보가 전달될 수 있습니다.
+        운영시간과 공간, 이용 조건처럼 명확히 안내받은 내용과
+        희망사항을 구분해 메모하세요.
+      </p>
+
+      <div class="share-box">
+        <p><strong>일행에게 공유할 내용</strong></p>
+        <p>방문 날짜: ○월 ○일</p>
+        <p>도착 예정: 오후 ○시</p>
+        <p>모임 종료: 오후 ○시</p>
+        <p>정확한 건물과 만날 출입구: ○○</p>
+        <p>대중교통 이용자는 ○시까지 출발</p>
+        <p>예약 상태: 문의 중 또는 최종 확정</p>
+      </div>
+
+      <h2>8. 공간은 방문 목적과 인원에 맞춰 확인하세요</h2>
+
+      <p>
+        공식 페이지의 사진은 좌석과 통로, 출입 방향처럼
+        화면에 직접 나타나는 요소를 참고하는 데 활용할 수 있습니다.
+        밝기와 거리감은 촬영 환경에 따라 다르게 보일 수 있으므로
+        사진만으로 정확한 크기나 수용 인원을 판단하지 마세요.
+      </p>
+
+      <p>
+        가구와 장식 배치도 촬영 이후 달라질 수 있습니다.
+        특정 좌석이나 시설이 중요하다면 방문 날짜에도 같은 조건이 유지되는지,
+        현재 인원으로 이용할 수 있는지 확인하세요.
+      </p>
+
+      <div class="notice">
+        강남 유앤미 가라오케의 운영시간과 이용 공간,
+        세부 조건 및 주변 교통 정보는 날짜에 따라 달라질 수 있습니다.
+        방문일에 적용되는 안내와 실제 귀가 교통편을 각각 확인하세요.
+      </div>
+
+      <div class="reference">
+        <p>
+          강남 유앤미 가라오케 방문과 이용 관련 최신 안내는
+          <a href="https://youandme-karaoke.isweb.co.kr/"
+             target="_blank"
+             rel="noopener noreferrer">
+            강남 유앤미 가라오케 공식 안내 페이지
+          </a>
+          에서 확인할 수 있습니다.
+        </p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
